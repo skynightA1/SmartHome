@@ -9,6 +9,7 @@ Serial.begin(9600);
 void loop()
 {
 if(digitalRead(2)==HIGH) {
+Serial.println("alert");
 digitalWrite(12, HIGH);
 digitalWrite(11, LOW);
 tone(7, 1000, 500);
@@ -19,7 +20,9 @@ tone(7, 800, 500);
 delay(500);
 }
 else {
+Serial.println("normal");
 digitalWrite(12, LOW);
 digitalWrite(11, LOW);
+delay(1000);
 }
 }
